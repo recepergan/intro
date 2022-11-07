@@ -7,10 +7,6 @@ public class ThreeQuestion {
 
         Integer resultXMap = 1;
         Integer resultYMap = 1;
-        Character [] kToPrime = new Character[0];
-        Character [] kResultXMap = new Character[0];
-        Character [] kResultYMap = new Character[0];
-
 
         Map<Character, Integer> toPrime = new HashMap<>();
         toPrime.put('A', 1);
@@ -88,6 +84,7 @@ public class ThreeQuestion {
 
     public static void main(String[] args) {
 
-        System.out.println(isAnagram("SAHTEE", "EHASTE"));
+        System.out.println(isAnagram("ENERJIK", "JENERIK"));
+
     }
 }
