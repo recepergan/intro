@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class TwoQuestion {
     public static void main(String[] args) {
         System.out.println(isAnagram("enerjik","jenerik"));
@@ -5,7 +7,10 @@ public class TwoQuestion {
 
     public static boolean isAnagram(String s1, String s2) {
 
-        if (s1.length() != s2.length()) {
+        String k = s1.toLowerCase();
+        String l = s2.toLowerCase();
+
+        if (k.length() != l.length()) {
             return false;
         }
 
@@ -13,11 +18,11 @@ public class TwoQuestion {
         String newStr = s2;
 
 
-        for (int i = 0; i < s1.length(); i++) {
-            for (int j = 0; j < s2.length(); j++) {
+        for (int i = 0; i < k.length(); i++) {
+            for (int j = 0; j < l.length(); j++) {
 
-                if (s1.charAt(i) == s2.charAt(j)) {
-                    delStr = s1.substring(i,i + 1);
+                if (k.charAt(i) == l.charAt(j)) {
+                    delStr = k.substring(i,i + 1);
                     newStr = newStr.replaceFirst(delStr,"");
                 }
             }
